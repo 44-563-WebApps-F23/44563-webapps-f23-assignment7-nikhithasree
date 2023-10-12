@@ -1,184 +1,209 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<html lang="en">
 
-            <title>
-                WA Assignment 6
-            </title>
-    </head>
-    <body>
-        <h1 style="background-color: yellow;color:magenta;font-style: italic;text-align: center;">Find the treasure by Nikhitha Sree Atluri</h1>
-        <p style="color:red;background-color: black;font-style: bold;text-align: center;">Click on the locations to search for treasure, beware the traps</p>
-        <p id="locations" style="text-align: center;color:chartreuse;font-style:inherit;background-color: green;">Number of locations checked is zero</p>
-        <p id="penalty" style="background-color: red;color:white;font-family: serif;text-align:center">Penalty is zero</p>
-        <p style="background-color: red;color:white;text-align: center;font-family: sans-serif;">Click for help</p>
-        <p id="help" style="color:red;background-color:skyblue;text-align: center;">Help report</p>
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                <img src="treasure.jpeg" id="1"  onclick="check(0)" >
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="2" onclick="check(1)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="3"onclick="check(2)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="4" onclick="check(3)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="5" onclick="check(4)">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="6"  onclick="check(5)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="7" onclick="check(6)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="8"onclick="check(7)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="9" onclick="check(8)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="10" onclick="check(9)">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="11"  onclick="check(10)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="12" onclick="check(11)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg" id="13"onclick="check(12)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="14" onclick="check(13)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="15" onclick="check(14)">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="16"  onclick="check(15)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="17" onclick="check(16)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="18"onclick="check(17)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="19" onclick="check(18)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="20" onclick="check(19)">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="21"  onclick="check(20)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="22" onclick="check(21)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="23"onclick="check(22)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="24" onclick="check(23)">
-                </div>
-                <div class="col-sm-2">
-                    <img src="treasure.jpeg"id="25" onclick="check(24)">
-                </div><br>
-            </div>
+<head>
+        <style>
+                h1 {
+                        background-color: rgb(245, 244, 239);
+                        animation: blinker 1s linear infinite;
+                        width: 66%;
+                        border: 1px solid rgb(19, 8, 8);
+                }
+        </style>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
+
+        <title>Nikhitha Sree Assignment 07</title>
+</head>
+
+<body>
+        <h1>Find the treasure by Nikhitha Sree</h1>
+
+        <div style="background-color: rgb(226, 250, 72);">Click on the locations to search
+                for treasure, beware the traps</div>
+        <div id="locations" style="background-color: rgb(21, 23, 5); color: rgb(250, 249, 252);">Number of locations
+                checked
+                is zero</div>
+        <div id="penalty" style="background-color: rgb(218, 249, 79); color: rgb(2, 1, 10);">Penalty is zero</div>
+        <div style="background-color: black; color: white">Click for help</div>
+        <div style="background-color: rgb(210, 243, 100); color: rgb(4, 1, 10);" id="help">Help
+                report</div>
+        <div class="row" style="padding-left: 120px;">
+                <div class="col-md-2"><img id="0" onclick="check(0)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="1" onclick="check(1)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="2" onclick="check(2)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="3" onclick="check(3)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="4" onclick="check(4)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
         </div>
-        <button type="button" class="btn btn-primary" onclick="randomGame()">
-            New Game</button>
-        <script>
-            let checkCount = 0;
-            let penalty = 0;
-            let lastCheck = 0;
-            let treasureLocation = 5;
-            let trapLocation = 18;
-            let gameOver = false;
-            const ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
-    
-            function randomGame(){
-                let penalty=0;
-                checkCount=0;
-                treasureLocation=Math.floor(Math.random()*25);
-                trapLocation=Math.floor(Math.random()*25);
-            }
-    
-            function check(position) {
+        <div class="row" style="padding-left: 120px;">
+                <div class="col-md-2"><img id="5" onclick="check(5)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="6" onclick="check(6)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="7" onclick="check(7)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="8" onclick="check(8)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="9" onclick="check(9)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+        </div>
+        <div class="row" style="padding-left: 120px;">
+                <div class="col-md-2"><img id="10" onclick="check(10)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="11" onclick="check(11)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="12" onclick="help()" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="13" onclick="check(13)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="14" onclick="check(14)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+        </div>
+        <div class="row" style="padding-left: 120px;">
+                <div class="col-md-2"><img id="15" onclick="check(15)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="16" onclick="check(16)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="17" onclick="check(17)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="18" onclick="check(18)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="19" onclick="check(19)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+        </div>
+        <div class="row" style="padding-left: 120px;">
+                <div class="col-md-2"><img id="20" onclick="check(20)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="21" onclick="check(21)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="22" onclick="check(22)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="23" onclick="check(23)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+                <div class="col-md-2"><img id="24" onclick="check(24)" src="treasure.jpeg" alt="treasure"
+                                style="width: 100px;height:100px;"></div>
+        </div>
+        <!--<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="makeNewDiv()">Add one</button>
+	-->
+        <div id="button" type="button" class="btn btn-success" onclick="reset()">New Game</div>
+</body>
+
+<script>
+        let ids = []
+        for (let i = 0; i < 25; i++) {
+                ids[i] = i;
+        }
+        let checkCount = 0
+        let penalty = 0
+        let lastCheck = 0
+        let treasureLocation = 5
+        let trapLocation = 18
+        let gameOver = false
+        function check(p) {
                 if (gameOver) {
-                    return;
+                        return
+                }
+                const img_id = ids[p]
+                tre_loc_img = document.getElementById(img_id)
+                if (p == treasureLocation) {
+                        tre_loc_img.src = "treasureimage.jpeg"
+                        gameOver = true
+                        penalty = penalty - 3
+                }
+                else if (p == trapLocation) {
+                        tre_loc_img.src = "trap.jpeg"
+                        gameOver = true
+                        penalty = penalty + 4
                 }
                 else {
-                    posit = ids[position];
-                    imageElement = document.getElementById(posit);
-                    if (posit == treasureLocation) {
-                        imageElement.src = 'treasureimage.jpeg';
-                        gameOver=true;
-                        penalty=penalty-3;
-    
-                    }
-                    else if (posit == trapLocation) {
-                        imageElement.src = 'trap.jpeg';
-                        gameOver=true;
-                        penalty=penalty+4;
-                    }
-                    else {
-                        imageElement.src = 'pirate.jpeg';
-                    }
+                        tre_loc_img.src = "pirate.jpeg"
                 }
-    
-                checkCount=checkCount+1;
-                penalty=penalty+1;
-                document.getElementById("locations").innerHTML='Locations: ' +checkCount;
-                document.getElementById("penalty").innerHTML='penalties: ' +penalty;
-                lastCheck=position;
-    
-            }
-            function help(){
-                let treasureRow=Math.floor(lastCheck/5);
-                let treasureCol=lastCheck%5;
-                let lastRow=Math.floor((treasureLocation-1)/5);
-                let lastCol=((treasureLocation-1)%5);
-                let away=Math.abs(lastRow-treasureRow)+Math.abs(treasureCol-lastCol);
-                if(away>2){
-                    document.getElementById("help").innerHTML="StepFaster";
-    
-                }
-                else if(away==2)
-                {
-                    document.getElementById("help").innerHTML="Close Matie";
-    
-                }
-                else{
-                    document.getElementById("help").innerHTML="Can Smell It";
-                }
-                penelty=penalty+2;
-                document.getElementById("penalty").innerHTML='Penalties:'+penalty;
-    
-            }
-        </script>
-    
+                checkCount = checkCount + 1
+                penalty = penalty + 1
+                loc_text = document.getElementById("locations")
+                loc_text.innerHTML = `Number of locations checked is ${checkCount}`
+                pen_text = document.getElementById("penalty")
+                pen_text.innerHTML = `Penalty is ${penalty}`
+                lastCheck = p
 
-    </body>
+        }
+        function help() {
+                let col = lastCheck % 5
+                let row = Math.floor(lastCheck / 5)
+
+                let treasureCol = treasureLocation % 5
+                let treasureRow = Math.floor(treasureLocation / 5)
+
+                let col_diff = Math.abs(col - treasureCol)
+                let row_diff = Math.abs(row - treasureRow)
+
+                let report = ""
+
+                if (((col_diff <= 1) && (row_diff == 0)) || ((col_diff == 0) && (row_diff <= 1))) {
+                        report = "Can smell it"
+                }
+                else if (col_diff + row_diff == 2) {
+                        report = "Close Matie"
+                }
+                else {
+                        report = "Step Faster"
+                }
+                penalty = penalty + 2
+                pen_text = document.getElementById("penalty")
+                pen_text.innerHTML = `Penalty is ${penalty}`
+                help_text = document.getElementById("help")
+                help_text.innerHTML = `Help report ${report}`
+        }
+
+        function reset() {
+                checkCount = 0;
+                penalty = 0
+                treasureLocation = Math.round(Math.random() * (24));
+                trapLocation = Math.round(Math.random() * (24));
+                document.getElementById("locations").innerHTML = `Number of locations checked is ${checkCount}`
+                document.getElementById("penalty").innerHTML = `Penalty is ${penalty}`
+
+        }
+
+        //BONUS
+        function newGame() {
+                checkCount = 0;
+                penalty = 0;
+                lastCheck = 0;
+                gameOver = false;
+
+                treasureLocation = Math.floor(Math.random() * 25);
+
+                do {
+                        trapLocation = Math.floor(Math.random() * 25);
+
+                } while (trapLocation === treasureLocation);
+
+                document.getElementById("locations").innerHTML = "Number of locations checked is : " + checkCount;
+                document.getElementById("penalty").innerHTML = "Penalty is : " + penalty;
+                document.getElementById("help").textContent = "Help report";
+
+                for (var i = 0; i < 25; i++) {
+                        document.getElementById(ids[i]).src = "treasure.jpeg"
+                }
+        }
+</script>
+
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Supriya merger.html page</title>
+	<title>Nikhitha Sree merger.html page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -45,7 +45,7 @@
 
 
 <body>
-	<h2>Nikithasree builds a merger</h2>
+	<h2>Nikhitha Sree builds a merger</h2>
 	<br>
     <hr>
     <div class="mb-3">
@@ -104,7 +104,20 @@
         parent.insertBefore(element,childElement)
     }
 
-	
+	//Bonus
+    function swap()
+  {
+    let mergerItemss = document.getElementsByClassName("merger")
+    let mergerItemssLength = mergerItemss.length
+    let firstElement = mergerItemss[Math.round(Math.random()*(mergerItemssLength-1))]
+    let secondElement = mergerItemss[Math.round(Math.random()*(mergerItemssLength-1))]
+
+    let parentElement = firstElement.parentNode
+    
+    const siblingA = firstElement.nextSibling === secondElement ? firstElement : firstElement.nextSibling;
+    secondElement.parentNode.insertBefore(firstElement, secondElement);
+    parentElement.insertBefore(secondElement, siblingA);
+  }
 
 </script>
 
